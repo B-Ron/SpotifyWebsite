@@ -1,0 +1,21 @@
+/* Add CSS Styles Below */
+
+/*Example styles for header */
+
+header{
+    background-color: #1db954;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+/*Example Style */
+
+ul{
+    list-style:none;
+    padding: 0;
+}
+
+li{
+    margin-bottom: 10px;
+}
