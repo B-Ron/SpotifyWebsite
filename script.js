@@ -22,6 +22,33 @@ function fetchData(){
             topArtistsList.appendChild(listItem);
         });
         //Process and display music taste
-        const musicTasteList = document.getElementById('myChart').getContext('2d');
+        const musicTasteList = document.getElementById("myChart").getContext("2d");
+        //Replace with logic to fetch display music taste based on listening history and library
+
+        //Create a chart
+        const = ctx document.getElementById("myChart").getContext("2d");
+        const chart = new Chart(ctx,{
+            type: "pie",
+            data: {
+                labels: data.items.map(artist => artist.name),
+                datasets: [{
+                    data: data.items.map(artist => popularity),
+                    backgroundColor: [
+                        "rgba(255, 99, 132, 0.7)",
+                        "rgba(54, 162, 235, 0.7)",
+                        "rgba(255,206,86,0.7)",
+                        "rgba(75,192,192,0.7)",
+                        "rbga(153,102,255,0.7)"
+                        // More colors will be added as needed
+                    ]
+                }]
+            },
+            options:{
+                //Chart options and configurations below
+            }
+        });
     })
+    .catch(error => console.error("Error fetching Spotify data: ",error));
 }
+// Call the fetchData function when the page loads
+window.onload = fetchData;
