@@ -5,7 +5,7 @@
 function fetchData(){
     //Make sure to replace with personal Spotify API and access token
     const apiEndpoint = "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=10";
-    const accessToken = "YOUR_ACCESS_TOKEN";
+    const accessToken = getSpotifyApiToken(client_id ="901657033f81485982712de609262d2e", client_secret = "a2685ee5b1014631b932d270520e6823" );
 
     //fetch the top artists data
     fetch(apiEndpoint, {
